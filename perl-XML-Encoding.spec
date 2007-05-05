@@ -14,6 +14,7 @@ BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-buildroot/
 Requires:	perl
 BuildArch:	noarch
+BuildRequires: perl(XML::Parser)
 
 %description
 The %{module} perl module, which is built as a subclass of
