@@ -1,7 +1,6 @@
 %define module	XML-Encoding
 %define version	1.01
-%define release	7mdk
-Packager: Jean-Michel Dault <jmdault@mandrakesoft.com>
+%define release	%mkrel 8
 
 Summary:	A perl module for parsing XML encoding maps
 Name:		perl-%{module}
@@ -28,6 +27,9 @@ files.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 make
+
+%check
+make test
 
 %clean 
 rm -rf $RPM_BUILD_ROOT
