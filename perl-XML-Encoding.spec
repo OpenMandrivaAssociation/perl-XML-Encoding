@@ -1,6 +1,6 @@
 %define module	XML-Encoding
-%define version	1.01
-%define release	%mkrel 8
+%define version	2.01
+%define release	%mkrel 1
 
 Summary:	A perl module for parsing XML encoding maps
 Name:		perl-%{module}
@@ -27,17 +27,17 @@ files.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-make
+%make OPTIMIZE="%{optflags}"
 
 %check
 make test
 
-%clean 
-rm -rf $RPM_BUILD_ROOT
-
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
+
+%clean 
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
