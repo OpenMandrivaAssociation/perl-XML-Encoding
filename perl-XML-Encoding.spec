@@ -1,6 +1,6 @@
 %define module	XML-Encoding
 %define version	2.01
-%define release	%mkrel 2
+%define release	%mkrel 3
 
 Summary:	A perl module for parsing XML encoding maps
 Name:		perl-%{module}
