@@ -1,26 +1,26 @@
 %define module	XML-Encoding
-%define version	2.01
-%define release	%mkrel 3
+%define version	2.02
+%define release	%mkrel 1
 
-Summary:	A perl module for parsing XML encoding maps
 Name:		perl-%{module}
 Version:	%{version}
 Release:	%{release}
+Summary:	A perl module for parsing XML encoding maps
 License:	Artistic
 Group:		Development/Perl
-Source0:	%{module}-%{version}.tar.bz2
-Url:		http://www.cpan.org
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-buildroot/
-Requires:	perl
-BuildArch:	noarch
-BuildRequires: perl(XML::Parser)
+Url:        http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/XML/%{module}-%{version}.tar.gz
+BuildArch:	    noarch
+BuildRequires:  perl(XML::Parser)
+BuildRoot:	    %{_tmppath}/%{name}-%{version}
 
 %description
-The %{module} perl module, which is built as a subclass of
-XML::Parser, provides a parser for encoding map files, which are XML
-files.
-
+This module, which is built as a subclass of XML::Parser, provides a parser for
+encoding map files, which are XML files. The file maps/encmap.dtd in the
+distribution describes the structure of these files. Calling a parse method
+returns the name of the encoding map (obtained from the name attribute of the
+root element). The contents of the map are processed through the callback
+functions push_prefix, pop_prefix, and range_set.
 
 %prep
 %setup -q -n %{module}-%{version}
@@ -43,5 +43,5 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_mandir}/*/*
 %{_bindir}/*
-%{perl_vendorlib}/XML/*
+%{perl_vendorlib}/XML
 
