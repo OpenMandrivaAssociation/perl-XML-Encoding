@@ -1,5 +1,5 @@
 %define module	XML-Encoding
-%define version	2.06
+%define version	2.07
 %define release	%mkrel 1
 
 Name:		perl-%{module}
