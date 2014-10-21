@@ -1,10 +1,10 @@
 %define modname	XML-Encoding
-%define modver	2.08
+%define modver 2.09
 
 Summary:	A perl module for parsing XML encoding maps
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	13
+Release:	1
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
@@ -39,4 +39,3 @@ make test
 %{perl_vendorlib}/XML
 %{_mandir}/man1/*
 %{_mandir}/man3/*
-
