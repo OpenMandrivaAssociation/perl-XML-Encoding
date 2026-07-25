@@ -1,14 +1,14 @@
 %define modname	XML-Encoding
-%define modver 2.09
+%define modver 2.11
 
 Summary:	A perl module for parsing XML encoding maps
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	6
+Version:	%{modver}
+Release:	1
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{modname}
-Source0:	http://www.cpan.org/modules/by-module/XML/%{modname}-%{modver}.tar.gz
+Url:		https://github.com/steve-m-hay/XML-Encoding
+Source0:	https://cpan.metacpan.org/authors/id/S/SH/SHAY/XML-Encoding-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test::More)
